@@ -32,7 +32,7 @@ export default ({ children }) => (
           <svg
             style={{ height: "100%", width: "100%" }}
             viewBox="0 0 100 100"
-            preserveAspectRatio="true"
+            preserveAspectRatio="xMidYMid meet"
           >
             <circle cx={50} cy={50} r={50} fill="currentColor" />
           </svg>
