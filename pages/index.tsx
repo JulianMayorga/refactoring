@@ -1,36 +1,30 @@
-import Head from "next/head";
+import Shell from "../components/Shell";
+import { Box, Heading, Grid } from "theme-ui";
 
 export default function Home() {
   return (
-    <div className="container">
-      <Head>
-        <title>Refactoring</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
-      <main>
-        <div style={{ width: 50, padding: 10, color: "#333" }}>
-          <svg viewBox="0 0 100 100" preserveAspectRatio="true">
-            <circle cx={50} cy={50} r={50} fill="currentColor" />
-          </svg>
-        </div>
-        <h1>Refactoring</h1>
-      </main>
-
-      <style jsx global>{`
-        html,
-        body {
-          padding: 0;
-          margin: 0;
-          font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
-            Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
-            sans-serif;
-        }
-
-        * {
-          box-sizing: border-box;
-        }
-      `}</style>
-    </div>
+    <Shell>
+      <Box>
+        <Box
+          as="main"
+          sx={{ maxWidth: ["100%", 1200], margin: "0 auto", paddingTop: 4 }}
+        >
+          <Grid
+            sx={{
+              gridAutoFlow: "column",
+              width: "fit-content",
+              alignItems: "center",
+            }}
+          >
+            <Box sx={{ width: 50, padding: 2 }}>
+              <svg viewBox="0 0 100 100" preserveAspectRatio="true">
+                <circle cx={50} cy={50} r={50} fill="currentColor" />
+              </svg>
+            </Box>
+            <Heading>refactoring</Heading>
+          </Grid>
+        </Box>
+      </Box>
+    </Shell>
   );
 }
