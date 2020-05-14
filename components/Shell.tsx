@@ -10,7 +10,14 @@ export default ({ children }) => (
       <title>refactoring</title>
       <link rel="icon" href="/favicon.ico" />
     </Head>
-    <Box sx={{ maxWidth: ["100%", 1200], margin: "0 auto", paddingTop: 4 }}>
+    <Box
+      sx={{
+        padding: 3,
+        borderBottom: "lightgray",
+        borderBottomStyle: "solid",
+        borderBottomWidth: 1,
+      }}
+    >
       <Grid
         sx={{
           gridAutoFlow: "column",
@@ -41,9 +48,16 @@ export default ({ children }) => (
           <Heading sx={{ cursor: "pointer" }}>refactoring</Heading>
         </NextLink>
       </Grid>
-      <Box as="main" sx={{ paddingTop: 4 }}>
-        {children}
-      </Box>
+    </Box>
+    <Box
+      sx={{
+        maxWidth: ["100%", 1200],
+        margin: "0 auto",
+        paddingTop: 4,
+      }}
+      as="main"
+    >
+      {children}
     </Box>
   </ThemeProvider>
 );
