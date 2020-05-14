@@ -10,7 +10,7 @@ export default function Home() {
 
       <main>
         <div style={{ width: 50, padding: 10, color: "#333" }}>
-          <svg viewBox="0 0 100 100" preserveAspectRatio>
+          <svg viewBox="0 0 100 100" preserveAspectRatio="true">
             <circle cx={50} cy={50} r={50} fill="currentColor" />
           </svg>
         </div>
