@@ -54,6 +54,7 @@ export default ({ children }) => (
         maxWidth: ["100%", 1200],
         margin: "0 auto",
         paddingTop: 4,
+        paddingBottom: 6,
       }}
       as="main"
     >
