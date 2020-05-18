@@ -1,9 +1,11 @@
 const codesandbox = require("remark-codesandbox");
+const withCSS = require("@zeit/next-css");
 
 const mode = "iframe";
 
 const withMDX = require("@next/mdx")({
   options: {
+    rehypePlugins: [require("@mapbox/rehype-prism")],
     remarkPlugins: [
       [
         codesandbox,
@@ -30,6 +32,8 @@ const withMDX = require("@next/mdx")({
   },
 });
 
-module.exports = withMDX({
-  pageExtensions: ["js", "jsx", "tsx", "md", "mdx"],
-});
+module.exports = withCSS(
+  withMDX({
+    pageExtensions: ["js", "jsx", "tsx", "md", "mdx"],
+  })
+);
