@@ -1,15 +1,5 @@
-const black = "#333";
+import { future } from "@theme-ui/presets";
 
 export default {
-  fonts: {
-    body: "system-ui, sans-serif",
-    heading: '"Avenir Next", sans-serif',
-    monospace: "Menlo, monospace",
-  },
-  colors: {
-    text: black,
-    background: "#fff",
-    primary: "#33e",
-    black,
-  },
+  ...future,
 };
