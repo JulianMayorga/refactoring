@@ -5,8 +5,6 @@ export function SubscribeForm() {
   return (
     <>
       <Head>
-        <title>refactoring</title>
-        <link rel="icon" href="/favicon.ico" />
         <link
           href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css"
           rel="stylesheet"
@@ -50,7 +48,6 @@ export function SubscribeForm() {
                 type="text"
                 name="b_d44198b27d5fba22549f52339_b1b66796bb"
                 tabIndex={-1}
-                value=""
               />
             </div>
             <div className="clear">

@@ -7,7 +7,7 @@ export default function Home() {
     <Shell>
       <Grid marginTop={4}>
         <Link>
-          <NextLink href="/red-green-refactor">
+          <NextLink href="/performant-shared-state-with-recoil">
             <Text
               sx={{
                 cursor: "pointer",
@@ -16,21 +16,7 @@ export default function Home() {
                 textDecoration: "underline",
               }}
             >
-              Red, green, refactor
-            </Text>
-          </NextLink>
-        </Link>
-        <Link>
-          <NextLink href="/counter-component">
-            <Text
-              sx={{
-                cursor: "pointer",
-                width: "fit-content",
-                fontSize: 3,
-                textDecoration: "underline",
-              }}
-            >
-              Counter component
+              Performant shared state with Recoil
             </Text>
           </NextLink>
         </Link>

@@ -19,6 +19,8 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    "components/index.test.jsx"
+    "components/Draw/3.jsx",
+    "components/Draw/2.jsx",
+    "components/Draw/1.jsx"
   ]
 }

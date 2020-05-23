@@ -1,7 +1,9 @@
 const codesandbox = require("remark-codesandbox");
 const withCSS = require("@zeit/next-css");
+const slug = require("remark-slug");
+const path = require("path");
 
-const mode = "iframe";
+const mode = "button";
 
 const withMDX = require("@next/mdx")({
   options: {
@@ -25,9 +27,24 @@ const withMDX = require("@next/mdx")({
               extends: "n9m2w9q8x0",
               entry: "index.test.js",
             },
+            recoil: {
+              extends: `file:${path.resolve("./templates/recoil/")}`,
+              entry: "src/App.js",
+              query: {
+                mode: "button", // Show button because dropping is broken on the codesandbox iframe
+              },
+            },
+            "recoil-test": {
+              extends: `file:${path.resolve("./templates/recoil/")}`,
+              entry: "src/App.test.js",
+              query: {
+                previewwindow: "tests",
+              },
+            },
           },
         },
       ],
+      slug,
     ],
   },
 });
