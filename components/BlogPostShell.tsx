@@ -39,7 +39,7 @@ export default function BlogPostShell(props) {
         >
           <LogotypeLink />
           <Text>
-            Post written by{" "}
+            Written by{" "}
             <a href="https://twitter.com/juli_mayorga">Julian Mayorga</a>
           </Text>
         </Flex>
