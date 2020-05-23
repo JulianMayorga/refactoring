@@ -29,7 +29,7 @@ export function SubscribeForm() {
         >
           <div id="mc_embed_signup_scroll">
             <label htmlFor="mce-EMAIL">
-              Want to get fresh new content? Subscribe
+              Subscribe to get content from time to time
             </label>
             <input
               type="email"
