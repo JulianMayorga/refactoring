@@ -21,7 +21,7 @@ export function SubscribeForm() {
       </Head>
       <div id="mc_embed_signup">
         <form
-          action="https://refactoring.us18.list-manage.com/subscribe/post?u=d44198b27d5fba22549f52339&amp;id=b1b66796bb"
+          action="https://okjulian.us18.list-manage.com/subscribe/post?u=ad30d52118c59fa8107175b9f&amp;id=dfde2c9573"
           method="post"
           id="mc-embedded-subscribe-form"
           name="mc-embedded-subscribe-form"
