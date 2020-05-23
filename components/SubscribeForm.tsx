@@ -1,5 +1,6 @@
 import React from "react";
 import Head from "next/head";
+import { Text, Input, Button } from "theme-ui";
 
 export function SubscribeForm() {
   return (
@@ -29,9 +30,9 @@ export function SubscribeForm() {
         >
           <div id="mc_embed_signup_scroll">
             <label htmlFor="mce-EMAIL">
-              Subscribe to get content from time to time
+              <Text>Subscribe to get content from time to time</Text>
             </label>
-            <input
+            <Input
               type="email"
               name="EMAIL"
               className="email"
@@ -44,20 +45,21 @@ export function SubscribeForm() {
               style={{ position: "absolute", left: -5000 }}
               aria-hidden="true"
             >
-              <input
+              <Input
                 type="text"
                 name="b_d44198b27d5fba22549f52339_b1b66796bb"
                 tabIndex={-1}
               />
             </div>
             <div className="clear">
-              <input
+              <Button
                 type="submit"
-                value="Subscribe"
                 name="subscribe"
                 id="mc-embedded-subscribe"
-                className="button"
-              />
+                sx={{ cursor: "pointer" }}
+              >
+                Subscribe
+              </Button>
             </div>
           </div>
         </form>
