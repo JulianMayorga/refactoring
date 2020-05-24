@@ -4,14 +4,14 @@ import "prismjs/themes/prism-tomorrow.css";
 import { MDXProvider } from "@mdx-js/react";
 import { SubscribeForm } from "./SubscribeForm";
 import Head from "next/head";
-import { Flex, Text, Box } from "theme-ui";
+import { Flex, Text, Box, Avatar } from "theme-ui";
+import { TwitterShareButton } from "react-twitter-embed";
 
 export default function BlogPostShell(props) {
   const components = {
     code: (props) => (
       <div style={{ maxHeight: 500, overflowY: "auto" }} {...props} />
     ),
-    inlineCode: (props) => <code {...props} />,
   };
   const postTitle = props.children[0].props.children;
   return (
@@ -20,7 +20,14 @@ export default function BlogPostShell(props) {
         <title>OK Julian - {postTitle}</title>
       </Head>
       <MDXProvider components={components}>
-        <div className="dasdas" {...props} />
+        <div {...props} />
+        <TwitterShareButton
+          options={{
+            text: `"${postTitle}", a guide by Julian Mayorga`,
+            size: "large",
+            via: "juli_mayorga",
+          }}
+        />
       </MDXProvider>
       <Box
         style={{
@@ -38,10 +45,14 @@ export default function BlogPostShell(props) {
           }}
         >
           <LogotypeLink />
-          <Text>
-            Written by{" "}
-            <a href="https://twitter.com/juli_mayorga">Julian Mayorga</a>
-          </Text>
+          <Flex sx={{ alignItems: "center" }}>
+            <Avatar src="/profile-pic.png" />
+            <Text>
+              Written by
+              <br />
+              <a href="https://twitter.com/juli_mayorga">Julian Mayorga</a>
+            </Text>
+          </Flex>
         </Flex>
       </Box>
     </Shell>
