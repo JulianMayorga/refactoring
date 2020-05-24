@@ -193,7 +193,7 @@ There are three components that make this interaction possible:
 
 To handle dragging and dropping this component uses react-dnd. The main reason is the idiomatic, hooks-based react API which allows declaring `Canvas` as a drop zone, and `RectangleCreator` as a draggable item.
 
-Here's the implementation in action:
+Here's the implementation in action, try it out! Drag the square thingy from the top to create some rectangles, and then move them around.
 
 <DrawV1 />
 
@@ -412,7 +412,7 @@ Now the sidebar component needs access to the rectangle's position, which is on 
 
 Here's the new feature in action. Notice that now the top-level rectangles array holds `id`, `x` and `y` instead of just `id`.
 
-There's also a new `RectangleInfo` component that displays a rectangle position.
+There's also a new `RectangleInfo` component that displays a rectangle position. You can play around with the rectangles and see their position change as you move them.
 
 <DrawV2 />
 
