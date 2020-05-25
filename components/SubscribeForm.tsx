@@ -41,7 +41,7 @@ export function SubscribeForm() {
                   id="mce-EMAIL"
                   placeholder="email address"
                   required
-                  style={{ marginRight: 10 }}
+                  style={{ marginRight: 10, width: "100%" }}
                 />
                 <div
                   style={{ position: "absolute", left: -5000 }}
