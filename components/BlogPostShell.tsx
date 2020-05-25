@@ -10,7 +10,7 @@ import LinkIcon from "./ExternalLinkIcon.jsx";
 
 function Links({ links }) {
   return (
-    <ul>
+    <ul style={{ listStyle: "none" }}>
       {links.map((link) => {
         if (Array.isArray(link[1])) {
           return (
@@ -25,15 +25,21 @@ function Links({ links }) {
         return (
           <li>
             <a href={href} target="_blank">
-              {text}
               <LinkIcon
-                style={{ marginLeft: 5, verticalAlign: "middle" }}
+                style={{ marginRight: 5, verticalAlign: "middle" }}
                 src="/insert_link.svg"
               />
+              {text}
             </a>
           </li>
         );
       })}
+      <style jsx>{`
+        padding-left: 0;
+        & ul {
+          padding-left: 25px;
+        }
+      `}</style>
     </ul>
   );
 }
@@ -122,6 +128,12 @@ export default function BlogPostShell(props) {
           </Flex>
         </Flex>
       </Box>
+      <style jsx global>{`
+        .toc ul {
+          list-style: none;
+          padding-left: 0;
+        }
+      `}</style>
     </Shell>
   );
 }
