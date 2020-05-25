@@ -2,12 +2,26 @@ const codesandbox = require("remark-codesandbox");
 const withCSS = require("@zeit/next-css");
 const slug = require("remark-slug");
 const path = require("path");
+const produce = require("immer").default;
 
 const mode = "button";
 
 const withMDX = require("@next/mdx")({
   options: {
-    rehypePlugins: [require("@mapbox/rehype-prism")],
+    rehypePlugins: [
+      require("@mapbox/rehype-prism"),
+      [
+        require("@jsdevtools/rehype-toc"),
+        {
+          headings: ["h2"],
+          customizeTOC: (toc) => {
+            return produce(toc, (draftToc) => {
+              draftToc.children[0].tagName = "ul";
+            });
+          },
+        },
+      ],
+    ],
     remarkPlugins: [
       [
         codesandbox,

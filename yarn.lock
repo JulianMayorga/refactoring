@@ -1293,6 +1293,11 @@
     "@types/yargs" "^15.0.0"
     chalk "^4.0.0"
 
+"@jsdevtools/rehype-toc@^3.0.1":
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/@jsdevtools/rehype-toc/-/rehype-toc-3.0.1.tgz#94dd7df9fe97a4de17285b4123a2b184a60ffe9a"
+  integrity sha512-HzLFICsh4PBwOb2PpGh8GN2uF20d+0KnfIkPAf251Lr+EwUtwS0IYyT9vMtRAR6Gi24eqRnXFRJOzLpRr4b4kg==
+
 "@mapbox/rehype-prism@^0.4.0":
   version "0.4.0"
   resolved "https://registry.yarnpkg.com/@mapbox/rehype-prism/-/rehype-prism-0.4.0.tgz#58714b345ec01256aa74c24762a341f6a771494e"
@@ -5252,6 +5257,11 @@ image-size@^0.6.2:
   version "0.6.3"
   resolved "https://registry.yarnpkg.com/image-size/-/image-size-0.6.3.tgz#e7e5c65bb534bd7cdcedd6cb5166272a85f75fb2"
   integrity sha512-47xSUiQioGaB96nqtp5/q55m0aBQSQdyIloMOc/x+QVTDZLNmXE892IIDrJ0hM1A5vcNUDD5tDffkSP5lCaIIA==
+
+immer@^6.0.8:
+  version "6.0.8"
+  resolved "https://registry.yarnpkg.com/immer/-/immer-6.0.8.tgz#3758890d66ed7baed5703b9e0763785a16156478"
+  integrity sha512-wmVdrkqL6OzhX5z2k/c0t8g+YzGy+V8B/r1GRdCTO0UcTiFkB0XVAxpJQT045KaNV2u14HzbLCYKJmt7yVCakg==
 
 import-cwd@^2.0.0:
   version "2.1.0"
