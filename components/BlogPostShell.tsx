@@ -69,6 +69,13 @@ export default function BlogPostShell(props) {
       </Head>
       <Heading as="h1">{title}</Heading>
       <p>{date}</p>
+      <TwitterShareButton
+        options={{
+          text: `"${title}", a guide by Julian Mayorga`,
+          size: "large",
+          via: "juli_mayorga",
+        }}
+      />
       <Grid columns={[1, 1, "2fr 1fr"]}>
         <Box sx={{ order: [2, 2, 1] }}>
           <MDXProvider components={components}>
