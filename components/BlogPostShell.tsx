@@ -84,7 +84,7 @@ export default function BlogPostShell(props) {
               left: 0,
               padding: 4,
               overflowY: "auto",
-              maxHeight: "100vh",
+              maxHeight: [null, null, "100vh"],
             }}
           >
             <Heading>Table of contents</Heading>
