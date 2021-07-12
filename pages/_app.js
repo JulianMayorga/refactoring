@@ -16,7 +16,7 @@ function MyApp({ Component, pageProps }) {
     <>
       <Head>
         <title>OKJulian</title>
-        <link rel="icon" href="/profile-pic.png" />
+        <link rel="icon" href="/profile-pic-rounded.png" />
       </Head>
       <nav className="px-12 py-8">
         <Link href="/">
