@@ -620,7 +620,24 @@ function Piece({
   const [x, y] = position;
   return (
     <div
-      className={`border-2 border-black bg-${color}-400 absolute`}
+      className={`border-2 border-black ${
+        // bg-${color}-400 was cleaner but is not [purgeable](https://tailwindcss.com/docs/optimizing-for-production#writing-purgeable-html)
+        color === "blue"
+          ? "bg-blue-400"
+          : color === "green"
+          ? "bg-green-400"
+          : color === "red"
+          ? "bg-red-400"
+          : color === "yellow"
+          ? "bg-yellow-400"
+          : color === "purple"
+          ? "bg-purple-400"
+          : color === "orange"
+          ? "bg-orange-400"
+          : color === "teal"
+          ? "bg-teal-400"
+          : ""
+      } absolute`}
       style={{
         borderLeftWidth: borderLeft === false ? "1px" : undefined,
         borderRightWidth: borderRight === false ? "1px" : undefined,
