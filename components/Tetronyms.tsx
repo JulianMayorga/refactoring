@@ -1,7 +1,7 @@
 import { FC, HTMLProps, useState } from "react";
 
 export function Tetronyms() {
-  const [pieceId, setPieceId] = useState<Pieces[number]["id"] | null>(null);
+  const [pieceId, setPieceId] = useState<Pieces[number]["id"] | null>(4);
   const [pieces] = useState<Pieces>(initialPieces);
   const piece = pieces.find(({ id }) => id === pieceId);
   return (
@@ -56,7 +56,10 @@ const initialPieces: Pieces = [
         <a href="https://graphcms.com" target="_blank">
           https://graphcms.com
         </a>
-        <p>Been working as a full stack developer at GraphCMS since 2018.</p>
+        <p>
+          Been working as a full stack developer at GraphCMS since 2018 as part
+          of a team full of inspiring professionals.
+        </p>
       </>
     ),
   },
@@ -70,7 +73,10 @@ const initialPieces: Pieces = [
         <a href="https://graphql.college/fullstack-graphql" target="_blank">
           https://graphql.college/fullstack-graphql
         </a>
-        <p>Open source book I wrote</p>
+        <p>
+          Wrote an open source book that teaches how to build fullstack GraphQL
+          applications
+        </p>
       </>
     ),
   },
@@ -84,7 +90,7 @@ const initialPieces: Pieces = [
         <a href="https://apileaf.com" target="_blank">
           https://apileaf.com
         </a>
-        <p>GraphQL internal apps</p>
+        <p>Built this visual tool to build GraphQL internal apps</p>
       </>
     ),
   },
@@ -100,8 +106,9 @@ const initialPieces: Pieces = [
         </a>
         <p>
           No-code UI for GraphQL APIs. Scans your types, writes queries for you
-          and presents data with a clean, functional UI
+          and presents data with a clean, functional UI.
         </p>
+        <p>I love building tools that help people build stuff</p>
       </>
     ),
   },
@@ -191,6 +198,22 @@ const PieceComponent: FC<{
   const Component = getComponent(piece);
   return <Component {...rest} />;
 };
+
+function Ping() {
+  return (
+    <div
+      className="absolute top-0 right-0"
+      style={{
+        transform: "translate(0.375rem, -0.375rem)",
+      }}
+    >
+      <span className="flex h-3 w-3">
+        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-pink-400 opacity-75"></span>
+        <span className="relative inline-flex rounded-full h-3 w-3 bg-pink-500"></span>
+      </span>
+    </div>
+  );
+}
 
 // - Language (Typescript)
 // - Network (GraphQL)
