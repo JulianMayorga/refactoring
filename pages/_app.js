@@ -20,7 +20,7 @@ function MyApp({ Component, pageProps }) {
       </Head>
       <nav className="px-12 py-8">
         <Link href="/">
-          <a className="hover:text-blue-400 flex items-center">
+          <a className="hover:underline flex items-center">
             <img
               src="profile-pic.png"
               className="rounded-full w-12 h-12 mr-4"
