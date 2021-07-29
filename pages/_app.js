@@ -2,6 +2,7 @@ import "tailwindcss/tailwind.css";
 import { MDXProvider } from "@mdx-js/react";
 import Link from "next/link";
 import Head from "next/head";
+import { OKJulian } from "../components/OKJulian";
 
 const components = {
   wrapper: (props) => (
@@ -15,17 +16,13 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       <Head>
-        <title>OKJulian</title>
-        <link rel="icon" href="/profile-pic-rounded.png" />
+        <title>Julian</title>
+        <link rel="icon" href="/ok.png" />
       </Head>
       <nav className="px-12 py-8">
         <Link href="/">
           <a className="hover:underline flex items-center">
-            <img
-              src="profile-pic.png"
-              className="rounded-full w-12 h-12 mr-4"
-            />
-            <span className="text-4xl">OKJulian</span>
+            <OKJulian className="h-12 mr-4" />
           </a>
         </Link>
       </nav>
