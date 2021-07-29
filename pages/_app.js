@@ -29,14 +29,14 @@ function MyApp({ Component, pageProps }) {
       <MDXProvider components={components}>
         <Component {...pageProps} />
       </MDXProvider>
-      <footer className="my-24 text-center">
-        Built with ❤️ by{" "}
+      <footer className="my-24 flex justify-end items-center max-w-6xl mx-auto">
         <a
-          className="underline cursor-pointer hover:text-pink-300"
+          className="cursor-pointer hover:underline flex flex-col items-center justify-center p-8 gap-2"
           href="https://twitter.com/_okjulian_"
           rel="noreferrer"
           target="_blank"
         >
+          <img src="profile-pic.png" className="rounded-full w-14 h-w-14" />
           Julian
         </a>
       </footer>
